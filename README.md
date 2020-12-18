@@ -250,6 +250,9 @@ A radio network designed for multinodes and robotic scenario
                 col_id : IDX_VISCNT=0,IDX_LOGO=1,IDX_LIGHT=2,IDX_SOUND=3,IDX_A_X=4,IDX_A_Y=5,IDX_A_Z=6
             
 
+![](https://paper-attachments.dropbox.com/s_A90EB1209324CE3E8E7B205A7FAE2745D4A2CCABFC031EE46221230FF933675D_1607653673324_image.png)
+![](https://paper-attachments.dropbox.com/s_A90EB1209324CE3E8E7B205A7FAE2745D4A2CCABFC031EE46221230FF933675D_1607677513418_image.png)
+![](https://paper-attachments.dropbox.com/s_A90EB1209324CE3E8E7B205A7FAE2745D4A2CCABFC031EE46221230FF933675D_1607685095035_image.png)
 
 ![](https://paper-attachments.dropbox.com/s_A90EB1209324CE3E8E7B205A7FAE2745D4A2CCABFC031EE46221230FF933675D_1607695431113_image.png)
 
