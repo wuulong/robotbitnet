@@ -2,7 +2,7 @@
 robot microbit network
 A radio network designed for multinodes and robotic scenario
 
-
+![](demo.png)
 
 - 功能列表
     - 多點網路
