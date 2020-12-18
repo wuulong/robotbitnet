@@ -1,0 +1,12 @@
+#demo car
+car_move 2 5050
+sleep 1000
+car_move 2 5000
+sleep 1000
+car_move 2 5099
+sleep 1000
+car_move 2 0099
+sleep 1000
+car_move 2 9999
+sleep 1000
+car_move 2 5050
