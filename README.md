@@ -55,9 +55,7 @@ A radio network designed for multinodes and robotic scenario
         - Logo 選台:
             - 按著時，代號會輪流顯示，那台車也會同時顯示。確認時，放掉 Logo
 - 展示影片
-    - [多點遙控車展示_V2.2.mov](https://drive.google.com/file/d/1KfWiZ7oTpz3-8hihB69_mxEHb1s7nGpy/view)
-    - 之前影片
-        - [多點遙控車展示_V2.1.mov](https://drive.google.com/file/d/1Rhx0gkFED4dsrfZGdgIjSfRNAvTA0CbM/view)
+    - [多點遙控車展示_V2.3.mov](https://drive.google.com/file/d/1vZQiyfy22A9bWtgy75VtgbQWZ98S-ttn/view?usp=sharing)
 - 參考
     - [MoonCar 登月小車- CircusPi](http://www.circuspi.com/index.php/teachingplan/microbit-mooncar/)         
 
@@ -157,6 +155,10 @@ A radio network designed for multinodes and robotic scenario
 為 PC 上的程式，監控整個網路
 
 ### DM CLI 命令
+    
+
+
+    DM CLI 命令
     python dm_monitor.py
     Dm>version
     DmMonitor V0.6.2
@@ -169,42 +171,39 @@ A radio network designed for multinodes and robotic scenario
     demo      help        network        rssi_his  sensing_his  version     
     
     Dm>dminfo
-    Domain nodes count=3
-    DM/broker ID=1
+    Domain nodes count=4
+    DM/broker ID=4
     
-    node ID= 1, last_rx=-0.528 s,ms=1,cs=0
-    type[3]=['1', '0', '2', '0', '0', '3', '-12', '100', '-1024']
+    node ID= 1, last_rx=-0.148 s,ms=1,cs=0
+    type[3]=['1', '0', '3', '0', '0', '0', '-72', '1068', '-4']
     type[10]=['1']
-    type[11]=['3', '-44']
-    type[20]=['3']
-    Sensing:VISCNT=2,LOGO=0,LIGHT=0,SOUND=3,A_X=-12,A_Y=100,A_Z=-1024
-    rssi[2]=-33 -> 0 cm
-    rssi[3]=-44 -> 0 cm
-    node ID= 2, last_rx=-0.114 s,ms=0,cs=0
-    type[3]=['0', '0', '2', '0', '1', '1', '-152', '188', '-1028']
+    type[11]=['2', '-26']
+    type[25]=['2', '255', '0', '0']
+    Sensing:VISCNT=3,LOGO=0,LIGHT=0,SOUND=0,A_X=-72,A_Y=1068,A_Z=-4
+    rssi[2]=-26 -> 0 cm
+    rssi[3]=-34 -> 0 cm
+    node ID= 2, last_rx=-0.045 s,ms=0,cs=0
+    type[3]=['0', '0', '3', '0', '0', '1', '-8', '1060', '-20']
     type[10]=['2']
-    type[11]=['3', '-23']
-    type[20]=['1']
-    Sensing:VISCNT=2,LOGO=0,LIGHT=1,SOUND=1,A_X=-152,A_Y=188,A_Z=-1028
-    rssi[1]=-33 -> 0 cm
-    rssi[3]=-23 -> 0 cm
-    node ID= 3, last_rx=-0.492 s,ms=0,cs=0
-    type[3]=['0', '0', '2', '0', '0', '1', '-28', '144', '-1008']
+    type[11]=['3', '-51']
+    Sensing:VISCNT=3,LOGO=0,LIGHT=0,SOUND=1,A_X=-8,A_Y=1060,A_Z=-20
+    rssi[1]=-26 -> 0 cm
+    rssi[3]=-51 -> 0 cm
+    node ID= 3, last_rx=-0.138 s,ms=0,cs=0
+    type[3]=['0', '0', '3', '0', '0', '0', '64', '96', '-988']
     type[10]=['3']
-    type[11]=['2', '-24']
-    type[20]=['2']
-    Sensing:VISCNT=2,LOGO=0,LIGHT=0,SOUND=1,A_X=-28,A_Y=144,A_Z=-1008
-    rssi[1]=-43 -> 0 cm
-    rssi[2]=-24 -> 0 cm
-    1->0 : 3,4462,60
-    1->2 : 1,3343,60
-    1->3 : 1,3346,60
-    2->0 : 4,4459,60
-    2->1 : 1,3342,60
-    2->3 : 4,3341,48
-    3->0 : 3,4453,60
-    3->1 : 1,3345,60
-    3->2 : 4,3345,48
+    type[11]=['2', '-52']
+    type[23]=['5354']
+    type[25]=['2', '0', '0', '60']
+    Sensing:VISCNT=3,LOGO=0,LIGHT=0,SOUND=0,A_X=64,A_Y=96,A_Z=-988
+    rssi[1]=-35 -> 0 cm
+    rssi[2]=-52 -> 0 cm
+    node ID= 4, last_rx=-0.057 s,ms=0,cs=0
+    type[2]=['0', '0', '3']
+    type[11]=['2', '-56']
+    rssi[1]=-46 -> 0 cm
+    rssi[2]=-56 -> 0 cm
+    rssi[3]=-67 -> 13 cm
     Dm>mon_ids
     SS-123
      0-dee
@@ -248,13 +247,70 @@ A radio network designed for multinodes and robotic scenario
                 4. plot one node with one sensor
                     sensing_plot [id] [col_id]
                 col_id : IDX_VISCNT=0,IDX_LOGO=1,IDX_LIGHT=2,IDX_SOUND=3,IDX_A_X=4,IDX_A_Y=5,IDX_A_Z=6
+    
+    Dm>help dminfo
+    Show DM information every second with [cnt] time
+                dminfo [cnt]
             
+    Dm>help sensing_his
+    show per node sensing history 
+                sensing_his [node_id] #0: all, c: clear history
+            
+    Dm>help sensing_plot
+    plot sensing history
+                
+                1. plot one node with all sensor 
+                    sensing_plot [id] 
+                2. plot all node with one sensor
+                    sensing_plot 0 [col_id]
+                3. plot all nodes
+                    sensing_plot 0
+                4. plot one node with one sensor
+                    sensing_plot [id] [col_id]
+                col_id : IDX_VISCNT=0,IDX_LOGO=1,IDX_LIGHT=2,IDX_SOUND=3,IDX_A_X=4,IDX_A_Y=5,IDX_A_Z=6
+            
+    Dm>help rssi_his
+    show per node rssi history 
+                rssi_his [node_id] #0: all, c: clear history
+            
+    Dm>help rssi_plot
+    plot rssi history
+                
+                1. plot one node with all rssi 
+                    rssi_plot [id] 
+                2. plot all node with one node's rssi
+                    rssi_plot 0 [rid]
+                3. plot all nodes
+                    rssi_plot 0
+                4. plot one node with one rssi
+                    rssi_plot [id] [rid]
+                
+            
+    Dm>help tx_cmd
+    Send RAW command by user request
+                ex: tx_cmd 1:3:1,20,3
+            
+    Dm>help car_move
+    car move command
+                car_move [did] [cmd] 
+                    did: 0 for all
+                    cmd format: 2-digit-num for left, right, 2-digit-num for power. number from 0-99  
+                    example) 5050: stop, 5099: front, 5000: right, 9999, left: 0099
+                ex: car_move 2 9999
+            
+    Dm>help network
+    Using networkx to plot current network with update per second
+                do_network [with_update]    #with_update 0:no update, 1: update    
+            
+    
+         
 
 ![](https://paper-attachments.dropbox.com/s_A90EB1209324CE3E8E7B205A7FAE2745D4A2CCABFC031EE46221230FF933675D_1607653673324_image.png)
 ![](https://paper-attachments.dropbox.com/s_A90EB1209324CE3E8E7B205A7FAE2745D4A2CCABFC031EE46221230FF933675D_1607677513418_image.png)
 ![](https://paper-attachments.dropbox.com/s_A90EB1209324CE3E8E7B205A7FAE2745D4A2CCABFC031EE46221230FF933675D_1607685095035_image.png)
 
-![](https://paper-attachments.dropbox.com/s_A90EB1209324CE3E8E7B205A7FAE2745D4A2CCABFC031EE46221230FF933675D_1607695431113_image.png)
+![](https://paper-attachments.dropbox.com/s_F2C6764D28F36F901AACE34728A06E860EDF2FC20EFA3E1A6EF80DBE7D681916_1608337646946_image.png)
+
 
 ![](https://paper-attachments.dropbox.com/s_A90EB1209324CE3E8E7B205A7FAE2745D4A2CCABFC031EE46221230FF933675D_1607695851372_image.png)
 
