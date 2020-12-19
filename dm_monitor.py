@@ -271,7 +271,7 @@ class DM():
             else:
                 self.nn_cnt[key] = [0,0,0]
         
-    def desc(self):
+    def desc(self,desc_id=0):
         if dm.ready:
             str = "Domain nodes count=%i\nDM/broker ID=%i\n" %(dm.get_nodes_cnt(),dm.dmid)
             print(str)
@@ -279,11 +279,12 @@ class DM():
             for id in sorted(keys):
                 node = dm.nodes[id]
                 print(node.desc())
-            keys = dm.nn_cnt.keys()
-            for key in sorted(keys):
-                nn = dm.nn_cnt[key]
-                ids = key.split("-")
-                print("%s->%s : %i,%i,%i" %(ids[0],ids[1],nn[0],nn[1],nn[2]))
+            if desc_id==1:
+                keys = dm.nn_cnt.keys()
+                for key in sorted(keys):
+                    nn = dm.nn_cnt[key]
+                    ids = key.split("-")
+                    print("%s->%s : %i,%i,%i" %(ids[0],ids[1],nn[0],nn[1],nn[2]))
         else:
             print("broker not ready!")
         
