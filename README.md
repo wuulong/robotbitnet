@@ -5,7 +5,8 @@ A radio network designed for multinodes and robotic scenario
 
 ![](doc/demo.png)
 
-
+## 展示影片
+[多點遙控車展示_V2.3.mov](https://odysee.com/@HaDad:a/RobotBitNet_RCCar:c)
 
 ## 功能列表
     - 多點網路
@@ -54,8 +55,7 @@ A radio network designed for multinodes and robotic scenario
         - ButtonB: 停止與控制切換
         - Logo 選台:
             - 按著時，代號會輪流顯示，那台車也會同時顯示。確認時，放掉 Logo
-- 展示影片
-    - [多點遙控車展示_V2.3.mov](https://odysee.com/@HaDad:a/RobotBitNet_RCCar:c)
+
 - 參考
     - [MoonCar 登月小車- CircusPi](http://www.circuspi.com/index.php/teachingplan/microbit-mooncar/)         
 
