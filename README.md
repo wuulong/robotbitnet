@@ -55,7 +55,7 @@ A radio network designed for multinodes and robotic scenario
         - Logo 選台:
             - 按著時，代號會輪流顯示，那台車也會同時顯示。確認時，放掉 Logo
 - 展示影片
-    - [多點遙控車展示_V2.3.mov](https://drive.google.com/file/d/1vZQiyfy22A9bWtgy75VtgbQWZ98S-ttn/view?usp=sharing)
+    - [多點遙控車展示_V2.3.mov](https://odysee.com/@HaDad:a/RobotBitNet_RCCar:c)
 - 參考
     - [MoonCar 登月小車- CircusPi](http://www.circuspi.com/index.php/teachingplan/microbit-mooncar/)         
 
@@ -352,5 +352,7 @@ A radio network designed for multinodes and robotic scenario
 
 # Document
 https://paper.dropbox.com/doc/RobotBitNet--BBj0BC1fHBQfhJAqEZkuyBIgAg-CVvstPQ1sEKXuTFA4Rw5K
+
+
 
 
